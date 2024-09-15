@@ -40,21 +40,21 @@ spring:
     druid:
       # 主数据源
       master:
-        url: jdbc:mysql://127.0.0.1:3306/bluewind-boot-main?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=utf8
+        url: jdbc:mysql://127.0.0.1:3306/bluewind-boot-main?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
         username: root
-        password: 123654
+        password: 123456
       # 辅数据源
       slave:
         # 辅数据源开关/默认关闭
         enabled: false
-        url: jdbc:mysql://localhost:3306/meco-server2?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=utf8
+        url: jdbc:mysql://localhost:3306/meco-server2?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
         username: root
-        password: 123654
+        password: 123456
       # quartz数据源(单独配置)
       quartz:
-        url: jdbc:mysql://rm-.mysql.rds.aliyuncs.com:3306/bluewind-boot-quartz?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=utf8
+        url: jdbc:mysql://127.0.0.1:3306/bluewind-boot-quartz?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
         username: root
-        password: 123654
+        password: 123456
       initialSize: 5
       minIdle: 10
       maxActive: 20
@@ -91,7 +91,7 @@ spring:
   redis:
     host: 127.0.0.1 # Redis服务器地址
     port: 6379 # Redis服务器连接端口
-    password: 123654 # Redis服务器连接密码（默认为空）
+    password: 123456 # Redis服务器连接密码（默认为空）
     database: 0 #Redis数据库索引（默认为0）
     timeout: 10s # 连接超时时间（毫秒）
     lettuce:
@@ -193,7 +193,7 @@ hash:
 redisson:
   mode: single
   address: redis://127.0.0.1:6379
-  password: 123654
+  password: 123456
   timeout: 5000
 # 2、redisson哨兵模式配置
 #redisson:
